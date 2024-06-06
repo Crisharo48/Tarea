@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tarea.Views.AboutPage"
+             xmlns:vm="clr-namespace:Tarea.ViewModels"
+             Title="Calculadora">
+
+    <ContentPage.BackgroundColor>
+        <Color>#F5F5F5</Color>
+        <!-- Fondo gris claro -->
+    </ContentPage.BackgroundColor>
+
+    <StackLayout Padding="20">
+
+        <Label Text="Ingrese el número 1" TextColor="Black"/>
+        <Entry x:Name="Numero1Entry" 
+               Keyboard="Numeric"
+               TextColor="Black" 
+               BackgroundColor="White"
+               PlaceholderColor="LightGray"
+               Margin="0,10,0,0"
+               HeightRequest="40"/>
+        <Label Text="Ingrese el número 2" TextColor="Black"/>
+        <Entry x:Name="Numero2Entry" 
+               Keyboard="Numeric"
+               TextColor="Black" 
+               BackgroundColor="White"
+               PlaceholderColor="LightGray"
+               Margin="0,10,0,0"
+               HeightRequest="40"/>
+        <Label Text="Seleccione una operación" TextColor="Black"/>
+        <Picker x:Name="OperacionPicker" 
+                Title="..." 
+                TextColor="Black"
+                BackgroundColor="White"
+                Margin="0,10,0,0"
+                HeightRequest="40">
+            <Picker.Items>
+                <x:String>Sumar</x:String>
+                <x:String>Restar</x:String>
+                <x:String>Multiplicar</x:String>
+                <x:String>Dividir</x:String>
+            </Picker.Items>
+        </Picker>
+
+        <Button Text="Calcular" 
+                Clicked="OnCalcularClicked" 
+                TextColor="White" 
+                BackgroundColor="#2196F3"
+                FontAttributes="Bold"
+                CornerRadius="10"
+                Margin="0,20,0,0"
+                HeightRequest="50"/>
+
+        <Label x:Name="ResultadoLabel" 
+               Text="Resultado" 
+               TextColor="Black"
+               FontSize="Large" 
+               HorizontalOptions="Center"
+               Margin="0,20,0,10"/>
+
+        <Button Text="Historial" Clicked="OnHistorialClicked" 
+                TextColor="White" 
+                BackgroundColor="#4CAF50"
+                FontAttributes="Bold"
+                CornerRadius="10"
+                Margin="0,20,0,0"
+                HeightRequest="50"/>
+    </StackLayout>
+</ContentPage>
